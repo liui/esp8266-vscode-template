@@ -14,7 +14,12 @@
                 "command": "docker run --rm -v ${env:IDF_PATH}:/opt/ESP8266_RTOS_SDK -v ${workspaceRoot}:/mnt/prj -w /mnt/prj -e PWD=/mnt/prj liui/build-env:esp8266-rtos make"
             },
             "linux": {
-                "command": "make"
+                "command": "make",
+                "options": {
+                    "env": {
+                        "PATH": "{{ cookiecutter.compiler_path }}/bin:${env:PATH}"
+                    }
+                }
             },
             "problemMatcher": []
         },
@@ -25,7 +30,12 @@
                 "command": "docker run --rm -v ${env:IDF_PATH}:/opt/ESP8266_RTOS_SDK -v ${workspaceRoot}:/mnt/prj -w /mnt/prj -e PWD=/mnt/prj liui/build-env:esp8266-rtos make clean"
             },
             "linux": {
-                "command": "make clean"
+                "command": "make clean",
+                "options": {
+                    "env": {
+                        "PATH": "{{ cookiecutter.compiler_path }}/bin:${env:PATH}"
+                    }
+                }
             },
             "problemMatcher": []
         },
@@ -36,7 +46,12 @@
                 "command": "docker run --rm -it -v ${env:IDF_PATH}:/opt/ESP8266_RTOS_SDK -v ${workspaceRoot}:/mnt/prj -w /mnt/prj -e PWD=/mnt/prj liui/build-env:esp8266-rtos make menuconfig"
             },
             "linux": {
-                "command": "make menuconfig"
+                "command": "make menuconfig",
+                "options": {
+                    "env": {
+                        "PATH": "{{ cookiecutter.compiler_path }}/bin:${env:PATH}"
+                    }
+                }
             },
             "problemMatcher": []
         }

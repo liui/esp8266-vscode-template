@@ -1,0 +1,5 @@
+{
+	"project_name": "my-project-name",
+	"idf_path": "~/dev/ESP8266_RTOS_SDK",
+	"compiler_path": "~/dev/xtensa-lx106-elf"
+}

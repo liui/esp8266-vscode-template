@@ -3,7 +3,7 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := vscode_project_template
+PROJECT_NAME := {{ cookiecutter.project_name }}
 
 include $(IDF_PATH)/make/project.mk
 
